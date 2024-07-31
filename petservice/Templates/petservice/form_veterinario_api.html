@@ -1,0 +1,24 @@
+<p style="color: blue; margin-left: 25px; text-shadow: 3px 3px 3px green; font-size: x-large; font-family: monospace;">
+
+{% block titulo %} PetService | Registro de Veterinarios {% endblock %}
+
+</p>
+
+{% if mi_formulario_v.errors %}
+    
+<p style="color: red;"> Hay errores en los datos ingresados, por favor hagalo nuevamente</p>
+    
+{% endif %}
+    
+<form method="POST">
+    
+    {% csrf_token %}
+    
+    <table style="margin: 25px; background-color: lightslategray;">
+    
+        {{ mi_formulario_v.as_table }}
+    
+    </table>
+    
+    <input style="box-shadow: 3px 3px 3px; margin-left: 25px;" type="submit", value="Enviar">    
+</form>

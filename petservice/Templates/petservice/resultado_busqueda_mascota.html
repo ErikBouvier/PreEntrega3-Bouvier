@@ -1,0 +1,12 @@
+
+<p style="text-decoration: underline; color: black;">Estoy buscando a: {{mascota}}</p>
+
+{% if mascota %}
+
+<ul>
+    {% for mascota in nombre_mascota %}
+    <li style="margin: 35px; color: darkgreen;">La mascota {{mascota.nombre_mascota}} se encuentra en nuestra base de datos. </li>
+    {% endfor %}
+</ul>
+
+{% endif %}

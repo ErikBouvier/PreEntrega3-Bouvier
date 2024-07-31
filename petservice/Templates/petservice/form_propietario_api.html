@@ -1,0 +1,24 @@
+<p style="color: blue; margin-left: 35px; text-shadow: 3px 3px 3px green; font-size: x-large; font-family: monospace;">
+{% block titulo %} PetService | Registro de Propietarios {% endblock %}
+    
+</p>
+    
+{% if mi_formulario_p.errors %}
+    
+<p style="color: red;"> Hay errores en los datos ingresados, por favor hagalo nuevamente</p>
+    
+{% endif %}
+    
+<form method="POST">
+    
+    {% csrf_token %}
+    
+    <table style="margin: 25px; background-color: lightpink;">
+    
+        {{ mi_formulario_p.as_table }}
+    
+    </table>
+    
+    <input style="box-shadow: 3px 3px 3px; margin-left: 25px;" type="submit", value="Enviar">
+    
+</form>

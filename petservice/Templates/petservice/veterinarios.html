@@ -1,0 +1,15 @@
+{% extends 'petservice/base.html' %}
+
+{% block titulo %} PetService | Profesionales {% endblock %}
+
+{% block cambios %}
+
+<h1 style="margin: 50px; color: blue;"> Aca estara la lista de profesionales </h1>
+
+{% for veterinario in veterinarios %}
+
+<li style="margin-left: 30px; color: darkslategray;">Nombre: {{veterinario.nombre}} - Apellido: {{veterinario.apellido}} - Cargo: {{veterinario.cargo}}</li>
+
+{% endfor %}
+
+{% endblock %}

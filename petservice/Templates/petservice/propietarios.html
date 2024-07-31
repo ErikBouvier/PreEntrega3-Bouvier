@@ -1,0 +1,15 @@
+{% extends 'petservice/base.html' %}
+
+{% block titulo %} PetService | Propietarios {% endblock %}
+
+{% block cambios %}
+
+<h1 style="margin: 50px; color: blue;"> Lista de propietarios </h1>
+
+{% for propietario in propietarios %}
+
+<li style="margin-left: 30px; color: darkslategray;">Nombre: {{propietario.nombre}} - Apellido: {{propietario.apellido}}</li>
+
+{% endfor %}
+
+{% endblock %}
